@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inserisci i tuoi dati"
+                android:textSize="36dp"
+                android:background="@color/dark_grey"
+                android:textColor="@color/white"
+                android:paddingLeft="10dp"
+               />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:textSize="36dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="es. Luigi"
+                android:id="@+id/attrNome"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cognome"
+                android:textSize="36dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="es. Pinna"
+                android:id="@+id/attrCognome"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data di Nascita"
+                android:textSize="36dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="es. 12/12/2012"
+                android:id="@+id/attrData"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Inserisci"
+                android:backgroundTint="@color/teal_700"
+                android:id="@+id/inserisci"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
