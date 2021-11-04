@@ -11,11 +11,12 @@ import android.widget.EditText;
 public class FormActivity extends AppCompatActivity {
 
     EditText nome, cognome, data;
-
     Persona persona;
+    Button inserisci;
+
     public static final String PERSONA_PATH="com.example.lezione1_userform.Persona";
 
-    Button inserisci;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,19 +27,17 @@ public class FormActivity extends AppCompatActivity {
         nome= findViewById(R.id.attrNome);
         cognome= findViewById(R.id.attrCognome);
         data= findViewById(R.id.attrData);
-
-        persona= new Persona();
         inserisci = findViewById(R.id.inserisci);
 
+        persona= new Persona();
 
         //Passaggio da un'activity all'altra al click
         inserisci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent showResult = new Intent(FormActivity.this, ResultActivity.class);
-
+                aggiornaPersona();  //setta i parametri di persona
                 showResult.putExtra(PERSONA_PATH, persona); //deve essere serializable
-
                 startActivity(showResult);
             }
         });
@@ -47,5 +46,7 @@ public class FormActivity extends AppCompatActivity {
 
     private void aggiornaPersona(){
         this.persona.setNome(nome.getText().toString());
+        this.persona.setCognome(cognome.getText().toString());
+        this.persona.setDataDiNascita(data.getText().toString());
     }
 }
