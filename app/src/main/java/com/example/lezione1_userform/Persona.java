@@ -4,12 +4,21 @@ import java.io.Serializable;
 
 public class Persona implements Serializable {
 
-    private String nome, cognome, dataDiNascita;
+    private String nome, cognome, dataDiNascita, indirizzo;
 
-    public Persona(String nome, String cognome, String dataDiNascita) { //costruttore con tutti i dati
+    public Persona(String nome, String cognome, String dataDiNascita, String indirizzo) { //costruttore con tutti i dati
         this.nome = nome;
         this.cognome = cognome;
         this.dataDiNascita = dataDiNascita;
+        this.indirizzo= indirizzo;
+    }
+
+    public String getIndirizzo() {
+        return indirizzo;
+    }
+
+    public void setIndirizzo(String indirizzo) {
+        this.indirizzo = indirizzo;
     }
 
     public Persona() {      //costruttore vuoto

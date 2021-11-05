@@ -14,7 +14,7 @@ public class ResultActivity extends AppCompatActivity {
 
     Button indietro;
 
-    TextView nomeResult, cognomeResult, dataResult;
+    TextView nomeResult, cognomeResult, dataResult, indirizzoResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class ResultActivity extends AppCompatActivity {
         nomeResult=findViewById(R.id.nomeConferma);
         cognomeResult=findViewById(R.id.cognomeConferma);
         dataResult=findViewById(R.id.dataConferma);
+        indirizzoResult=findViewById(R.id.indirizzoConferma);
 
         Persona getPersona = new Persona();
 
@@ -36,13 +37,13 @@ public class ResultActivity extends AppCompatActivity {
         nomeResult.setText(getPersona.getNome());
         cognomeResult.setText(getPersona.getCognome());
         dataResult.setText(getPersona.getDataDiNascita());
+        indirizzoResult.setText(getPersona.getIndirizzo());
 
         indietro.setOnClickListener(new View.OnClickListener() {    //passaggio da un'activity all'altra
             @Override
             public void onClick(View v) {
                 Intent backButton = new Intent(ResultActivity.this, FormActivity.class);
                 startActivity(backButton);
-
 
             }
         });

@@ -72,6 +72,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="5dp"
                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Indirizzo"
+                android:textSize="36dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="es. Via Umberto 242"
+                android:id="@+id/attrIndirizzo"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

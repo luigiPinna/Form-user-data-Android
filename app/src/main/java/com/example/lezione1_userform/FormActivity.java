@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class FormActivity extends AppCompatActivity {
 
-    EditText nome, cognome, data;
+    EditText nome, cognome, data, indirizzo;
     Persona persona;
     Button inserisci;
 
@@ -27,6 +27,7 @@ public class FormActivity extends AppCompatActivity {
         nome= findViewById(R.id.attrNome);
         cognome= findViewById(R.id.attrCognome);
         data= findViewById(R.id.attrData);
+        indirizzo=findViewById(R.id.attrIndirizzo);
         inserisci = findViewById(R.id.inserisci);
 
         persona= new Persona();
@@ -48,5 +49,6 @@ public class FormActivity extends AppCompatActivity {
         this.persona.setNome(nome.getText().toString());
         this.persona.setCognome(cognome.getText().toString());
         this.persona.setDataDiNascita(data.getText().toString());
+        this.persona.setIndirizzo(indirizzo.getText().toString());
     }
 }
